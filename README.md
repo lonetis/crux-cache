@@ -2,6 +2,8 @@
 
 Cached Chrome User Experience Report (CrUX) data for global and country-specific origins with popularity rankings.
 
+![CrUX Cache Screenshot](screenshot.png)
+
 ## Download Data
 
 ### Option 1: Command Line (Quick & Easy)
