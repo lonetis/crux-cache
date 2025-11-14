@@ -4,18 +4,18 @@
 # Downloads CrUX datasets directly from GitHub
 #
 # Usage:
-#   bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux/main/download.sh) <dataset>
-#   bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux/main/download.sh) <dataset> <YYYYMM>
+#   bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) <dataset>
+#   bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) <dataset> <YYYYMM>
 #
 # Examples:
-#   bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux/main/download.sh) global
-#   bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux/main/download.sh) global 202510
+#   bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) global
+#   bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) global 202510
 #
 
 set -e
 
 # Configuration
-REPO_BASE="https://raw.githubusercontent.com/lonetis/crux/main"
+REPO_BASE="https://raw.githubusercontent.com/lonetis/crux-cache/main"
 DATASET="${1:-global}"
 REQUESTED_MONTH="${2:-}"
 
@@ -28,7 +28,7 @@ if [ -z "$DATASET" ]; then
     echo "  $0 global 202510   # Download October 2025 global dataset"
     echo "  $0 <country>       # Download latest country-specific dataset"
     echo ""
-    echo "Visit https://lonetis.github.io/crux or check data/datasets.json"
+    echo "Visit https://lonetis.github.io/crux-cache or check data/datasets.json"
     echo "for the list of available datasets."
     exit 1
 fi
@@ -58,7 +58,7 @@ MANIFEST=$(curl -sSL "$MANIFEST_URL" 2>/dev/null)
 if [ $? -ne 0 ] || [ -z "$MANIFEST" ]; then
     echo "✗ Error: Dataset '$DATASET' not found"
     echo ""
-    echo "Visit https://lonetis.github.io/crux for the list of available datasets"
+    echo "Visit https://lonetis.github.io/crux-cache for the list of available datasets"
     exit 1
 fi
 

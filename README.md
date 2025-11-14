@@ -10,23 +10,23 @@ Download datasets directly from your terminal with a single command:
 
 ```bash
 # Download latest global dataset
-bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux/main/download.sh) global
+bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) global
 
 # Download latest country-specific dataset (e.g., us, de, jp)
-bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux/main/download.sh) us
+bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) us
 
 # Download specific month (YYYYMM format)
-bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux/main/download.sh) global 202510
-bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux/main/download.sh) us 202509
+bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) global 202510
+bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) us 202509
 ```
 
 This will download and merge all chunks into a single CSV file (e.g., `202510.csv`) in your current directory.
 
-**Available datasets:** Check [lonetis.github.io/crux](https://lonetis.github.io/crux) or view `data/datasets.json` for the current list of available datasets.
+**Available datasets:** Check [lonetis.github.io/crux-cache](https://lonetis.github.io/crux-cache) or view `data/datasets.json` for the current list of available datasets.
 
 ### Option 2: Website
 
-Visit **[lonetis.github.io/crux](https://lonetis.github.io/crux)** to browse and download any dataset with a streaming browser interface
+Visit **[lonetis.github.io/crux-cache](https://lonetis.github.io/crux-cache)** to browse and download any dataset with a streaming browser interface
 
 ## Data Format
 
