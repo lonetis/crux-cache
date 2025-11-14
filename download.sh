@@ -9,7 +9,7 @@
 #
 # Examples:
 #   bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) global
-#   bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) global 202510
+#   bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) global 202410
 #
 
 set -e
@@ -25,7 +25,7 @@ if [ -z "$DATASET" ]; then
     echo ""
     echo "Examples:"
     echo "  $0 global          # Download latest global dataset"
-    echo "  $0 global 202510   # Download October 2025 global dataset"
+    echo "  $0 global 202410   # Download October 2024 global dataset"
     echo "  $0 <country>       # Download latest country-specific dataset"
     echo ""
     echo "Visit https://lonetis.github.io/crux-cache or check data/datasets.json"
@@ -36,7 +36,7 @@ fi
 # Validate month format if provided
 if [ -n "$REQUESTED_MONTH" ]; then
     if ! [[ "$REQUESTED_MONTH" =~ ^[0-9]{6}$ ]]; then
-        echo "✗ Error: Month must be in YYYYMM format (e.g., 202510)"
+        echo "✗ Error: Month must be in YYYYMM format (e.g., 202410)"
         exit 1
     fi
 fi

@@ -95,12 +95,12 @@ class CruxCollector:
             print(f"  ✗ Error fetching data: {e}")
             raise
 
-    def get_available_months(self, start_year: int = 2025, start_month: int = 1) -> list[tuple[int, int]]:
+    def get_available_months(self, start_year: int = 2024, start_month: int = 1) -> list[tuple[int, int]]:
         """
         Query BigQuery to find all available months in the dataset.
 
         Args:
-            start_year: Earliest year to check (default: 2025)
+            start_year: Earliest year to check (default: 2024)
             start_month: Earliest month to check (default: 1 for January)
 
         Returns:

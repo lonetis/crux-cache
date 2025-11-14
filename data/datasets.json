@@ -4,7 +4,7 @@
       "id": "de",
       "name": "Cached Chrome User Experience Report - de",
       "total_months": 10,
-      "earliest_month": "202501",
+      "earliest_month": "202401",
       "latest_month": "202510",
       "latest_origins": 1219059,
       "total_size": 426090162
@@ -13,7 +13,7 @@
       "id": "global",
       "name": "Cached Chrome User Experience Report - global",
       "total_months": 10,
-      "earliest_month": "202501",
+      "earliest_month": "202401",
       "latest_month": "202510",
       "latest_origins": 18438315,
       "total_size": 6773705897
@@ -22,7 +22,7 @@
       "id": "jp",
       "name": "Cached Chrome User Experience Report - jp",
       "total_months": 10,
-      "earliest_month": "202501",
+      "earliest_month": "202401",
       "latest_month": "202510",
       "latest_origins": 1335671,
       "total_size": 456007059
@@ -31,7 +31,7 @@
       "id": "us",
       "name": "Cached Chrome User Experience Report - us",
       "total_months": 10,
-      "earliest_month": "202501",
+      "earliest_month": "202401",
       "latest_month": "202510",
       "latest_origins": 3496153,
       "total_size": 1300376573

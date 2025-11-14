@@ -18,11 +18,11 @@ bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/downl
 bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) us
 
 # Download specific month (YYYYMM format)
-bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) global 202510
-bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) us 202509
+bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) global 202410
+bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) us 202409
 ```
 
-This will download and merge all chunks into a single CSV file (e.g., `202510.csv`) in your current directory.
+This will download and merge all chunks into a single CSV file (e.g., `202410.csv`) in your current directory.
 
 **Available datasets:** Check [lonetis.github.io/crux-cache](https://lonetis.github.io/crux-cache) or view `data/datasets.json` for the current list of available datasets.
 
@@ -48,7 +48,7 @@ https://www.facebook.com,1000
 
 - **Scope**: All ~18M origins tracked by CrUX
 - **Updates**: Monthly (automated)
-- **History**: January 2025 onwards
+- **History**: January 2024 onwards
 - **Format**: CSV chunks (25MB each, uncompressed)
 - **Source**: [Chrome User Experience Report](https://developer.chrome.com/docs/crux) via BigQuery
 

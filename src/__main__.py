@@ -48,15 +48,15 @@ def main():
     parser.add_argument(
         '--start-year',
         type=int,
-        default=2025,
-        help='Starting year (default: 2025)'
+        default=2024,
+        help='Starting year (default: 2024)'
     )
 
     parser.add_argument(
         '--start-month',
         type=int,
         default=1,
-        help='Starting month (default: 1 for January 2025)'
+        help='Starting month (default: 1 for January 2024)'
     )
 
     parser.add_argument(
