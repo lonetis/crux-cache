@@ -1,0 +1,105 @@
+name: Update CrUX Data
+
+on:
+  schedule:
+    # Run daily at 3:00 AM UTC to check for new monthly data
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+    # Allow manual trigger
+
+permissions:
+  contents: write
+
+# Configure which datasets to download
+env:
+  COUNTRIES: "US DE JP"  # Space-separated list of country codes
+  START_YEAR: "2025"
+  START_MONTH: "1"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install pipenv
+        run: pip install pipenv
+
+      - name: Cache pipenv virtualenv
+        uses: actions/cache@v3
+        with:
+          path: ~/.local/share/virtualenvs
+          key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pipenv-
+
+      - name: Install dependencies
+        run: pipenv install --deploy
+
+      - name: Authenticate to Google Cloud
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+        run: echo "Credentials loaded from secrets"
+
+      - name: Download global dataset
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+        run: |
+          pipenv run python -m src data/global \
+            --dataset-type global \
+            --incremental \
+            --start-year ${{ env.START_YEAR }} \
+            --start-month ${{ env.START_MONTH }}
+
+      - name: Download country datasets
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+        run: |
+          for country in ${{ env.COUNTRIES }}; do
+            echo "Downloading ${country} dataset..."
+            country_lower=$(echo "$country" | tr '[:upper:]' '[:lower:]')
+            pipenv run python -m src data/${country_lower} \
+              --dataset-type country \
+              --country-code ${country} \
+              --incremental \
+              --start-year ${{ env.START_YEAR }} \
+              --start-month ${{ env.START_MONTH }}
+          done
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if [[ -n $(git status --porcelain data/) ]]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected in data directory"
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No changes detected"
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add data/
+          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+          git commit -m "Update CrUX data - ${TIMESTAMP}"
+          git push
+
+      - name: Summary
+        run: |
+          if [[ "${{ steps.check_changes.outputs.has_changes }}" == "true" ]]; then
+            echo "✓ Data updated successfully"
+          else
+            echo "✓ No new data available"
+          fi

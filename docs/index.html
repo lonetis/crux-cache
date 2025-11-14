@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download the complete Chrome User Experience Report dataset with all origins and popularity rankings.">
+    <title>CrUX Cache</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CrUX Cache</h1>
+            <p class="tagline">Cached Chrome User Experience Report Data</p>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>Download the Global Dataset</h2>
+                    <p>Access all origins from the Chrome User Experience Report with their popularity rankings.</p>
+
+                    <div class="download-card">
+                        <div class="dataset-info" id="datasetInfo">
+                            <div class="info-item">
+                                <span class="label">Latest Month:</span>
+                                <span class="value" id="latestMonth">Loading...</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Total Origins:</span>
+                                <span class="value" id="totalOrigins">Loading...</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">File Size:</span>
+                                <span class="value" id="fileSize">Loading...</span>
+                            </div>
+                        </div>
+
+                        <button id="downloadBtn" class="download-btn" disabled>
+                            <span class="btn-icon">⬇</span>
+                            <span class="btn-text">Preparing Download...</span>
+                        </button>
+
+                        <div class="progress-container" id="progressContainer" style="display: none;">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <div class="progress-text" id="progressText">Initializing...</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Information Section -->
+            <section class="info-section">
+                <div class="info-grid">
+                    <div class="info-box">
+                        <h3>What is CrUX?</h3>
+                        <p>The Chrome User Experience Report (CrUX) provides real-world performance and usage metrics from millions of Chrome users. This dataset includes all origins tracked by CrUX with their popularity rankings.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Data Format</h3>
+                        <p>CSV format with two columns: <code>origin</code> (full URL including protocol and subdomain) and <code>rank</code> (popularity ranking). Origins are sorted by rank.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>How It Works</h3>
+                        <p>Data is automatically updated monthly from the Google BigQuery CrUX dataset. Files are split into chunks and merged in your browser using streaming technology for efficient downloads.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Data Coverage</h3>
+                        <p>Historical data available from January 2025 onwards. New releases typically appear mid-month, reflecting the previous month's data.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Browse All Datasets Section -->
+            <section class="browse-section">
+                <h2>Browse All Datasets</h2>
+                <p>Select a specific dataset and month to download</p>
+
+                <div class="dataset-selector">
+                    <div class="selector-group">
+                        <label for="datasetSelect">Dataset:</label>
+                        <select id="datasetSelect" class="dataset-select">
+                            <option>Loading datasets...</option>
+                        </select>
+                    </div>
+
+                    <div class="selector-group">
+                        <label for="monthSelect">Month:</label>
+                        <select id="monthSelect" class="month-select" disabled>
+                            <option>Loading...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="selected-dataset-info" id="selectedDatasetInfo" style="display: none;">
+                    <div class="info-row">
+                        <span class="info-label">Dataset:</span>
+                        <span class="info-value" id="selectedDatasetName">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Month:</span>
+                        <span class="info-value" id="selectedMonth">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Origins:</span>
+                        <span class="info-value" id="selectedOrigins">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">File Size:</span>
+                        <span class="info-value" id="selectedSize">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Chunks:</span>
+                        <span class="info-value" id="selectedChunks">-</span>
+                    </div>
+                </div>
+
+                <button id="downloadSelectedBtn" class="download-btn secondary-btn" disabled>
+                    <span class="btn-icon">⬇</span>
+                    <span class="btn-text">Select Dataset</span>
+                </button>
+
+                <div class="progress-container" id="progressContainerSecondary" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFillSecondary"></div>
+                    </div>
+                    <div class="progress-text" id="progressTextSecondary">Initializing...</div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Data source: <a href="https://developer.chrome.com/docs/crux" target="_blank" rel="noopener">Chrome User Experience Report</a></p>
+            <p>Built with ❤️ for the web community</p>
+        </footer>
+    </div>
+
+    <script src="download.js"></script>
+    <script src="ui.js"></script>
+</body>
+</html>
