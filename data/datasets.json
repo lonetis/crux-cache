@@ -2,7 +2,7 @@
   "datasets": [
     {
       "id": "de",
-      "name": "Cached Chrome User Experience Report - global",
+      "name": "Cached Chrome User Experience Report - de",
       "total_months": 22,
       "earliest_month": "202401",
       "latest_month": "202510",
@@ -20,7 +20,7 @@
     },
     {
       "id": "jp",
-      "name": "Cached Chrome User Experience Report - global",
+      "name": "Cached Chrome User Experience Report - jp",
       "total_months": 22,
       "earliest_month": "202401",
       "latest_month": "202510",
@@ -29,7 +29,7 @@
     },
     {
       "id": "us",
-      "name": "Cached Chrome User Experience Report - global",
+      "name": "Cached Chrome User Experience Report - us",
       "total_months": 22,
       "earliest_month": "202401",
       "latest_month": "202510",
