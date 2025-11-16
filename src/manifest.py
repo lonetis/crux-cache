@@ -140,15 +140,105 @@ class ManifestGenerator:
 
         print(f"  ✓ Manifest saved to {self.manifest_path}")
 
-    def update(self) -> Dict:
+    def update(self, incremental: bool = True) -> Dict:
         """
         Scan directory and update manifest file.
+
+        Args:
+            incremental: If True, only append new entries (preserves missing data).
+                        If False, regenerate entire manifest from scratch.
 
         Returns:
             Updated manifest dictionary
         """
-        manifest = self.generate()
+        if incremental:
+            manifest = self.incremental_update()
+        else:
+            manifest = self.generate()
+
         self.save(manifest)
+        return manifest
+
+    def incremental_update(self) -> Dict:
+        """
+        Update manifest by only appending new entries, preserving existing ones.
+
+        This is useful when working with sparse checkouts where not all CSV files
+        are available. Assumes data is never deleted.
+
+        Returns:
+            Updated manifest dictionary
+        """
+        print("Performing incremental manifest update...")
+
+        # Load existing manifest if it exists
+        existing_manifest = {}
+        if self.manifest_path.exists():
+            try:
+                with open(self.manifest_path, 'r') as f:
+                    existing_manifest = json.load(f)
+                print(f"  Loaded existing manifest with {len(existing_manifest.get('months', {}))} months")
+            except (json.JSONDecodeError, IOError) as e:
+                print(f"  ⚠ Could not load existing manifest: {e}")
+                print("  Starting with empty manifest")
+
+        # Scan for new data
+        new_months_data = self.scan_chunks()
+
+        # Merge with existing data
+        manifest = {
+            'name': f'Cached Chrome User Experience Report - {self.dataset_name}',
+            'months': existing_manifest.get('months', {})
+        }
+
+        # Track what was added
+        added_months = []
+        updated_months = []
+
+        for yyyymm, chunks in sorted(new_months_data.items()):
+            if yyyymm in manifest['months']:
+                # Month already exists - update it
+                updated_months.append(yyyymm)
+            else:
+                # New month - add it
+                added_months.append(yyyymm)
+
+            year = int(yyyymm[:4])
+            month = int(yyyymm[4:6])
+
+            month_size = sum(c['size'] for c in chunks)
+            month_origins = sum(c['origins'] for c in chunks)
+
+            manifest['months'][yyyymm] = {
+                'year': year,
+                'month': month,
+                'chunks': chunks,
+                'total_chunks': len(chunks),
+                'total_size': month_size,
+                'origins': month_origins
+            }
+
+        # Update summary statistics based on all months (existing + new)
+        all_months = manifest['months']
+        total_size = sum(m['total_size'] for m in all_months.values())
+
+        manifest['summary'] = {
+            'total_months': len(all_months),
+            'total_size': total_size,
+            'earliest_month': min(all_months.keys()) if all_months else None,
+            'latest_month': max(all_months.keys()) if all_months else None
+        }
+
+        # Print summary
+        if added_months:
+            print(f"  ✓ Added {len(added_months)} new month(s): {', '.join(added_months)}")
+        if updated_months:
+            print(f"  ✓ Updated {len(updated_months)} existing month(s): {', '.join(updated_months)}")
+        if not added_months and not updated_months:
+            print("  No new data found")
+
+        print(f"\n  Total: {len(all_months)} months, {total_size / (1024**3):.2f} GB")
+
         return manifest
 
 

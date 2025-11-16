@@ -68,7 +68,13 @@ def main():
     parser.add_argument(
         '--manifest-only',
         action='store_true',
-        help='Only regenerate manifest.json without downloading data'
+        help='Only update manifest.json without downloading data'
+    )
+
+    parser.add_argument(
+        '--regenerate',
+        action='store_true',
+        help='Fully regenerate manifest from scratch instead of incremental update (use with --manifest-only)'
     )
 
     args = parser.parse_args()
@@ -99,9 +105,12 @@ def main():
 
     # If only updating manifest, do that and exit
     if args.manifest_only:
-        print("Regenerating manifest only...")
+        if args.regenerate:
+            print("Fully regenerating manifest from scratch...")
+        else:
+            print("Updating manifest incrementally...")
         generator = ManifestGenerator(data_dir, dataset_name)
-        generator.update()
+        generator.update(incremental=not args.regenerate)
 
         # Also update the master datasets manifest
         print()
@@ -176,9 +185,9 @@ def main():
             print(f"  ✗ Error processing {year}-{month:02d}: {e}")
             continue
 
-    # Generate/update manifest
+    # Generate/update manifest (incremental by default)
     print("=" * 60)
-    manifest_gen.update()
+    manifest_gen.update(incremental=True)
 
     # Also update the master datasets manifest
     print()
