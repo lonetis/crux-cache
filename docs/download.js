@@ -130,6 +130,7 @@ class StreamingDownloader {
         const chunks = monthData.chunks;
         const totalChunks = chunks.length;
         const totalSize = monthData.total_size;
+        const dataset = this.dataset; // Capture dataset for filename
         const self = this; // Preserve context for use inside ReadableStream
 
         // Create a readable stream that will merge all chunks
@@ -218,7 +219,7 @@ class StreamingDownloader {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = `${yyyymm}.csv`;
+        a.download = `crux_${dataset}_${yyyymm}.csv`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);

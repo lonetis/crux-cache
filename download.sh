@@ -102,7 +102,7 @@ echo "  Chunks: $CHUNK_COUNT"
 echo ""
 
 # Output filename
-OUTPUT_FILE="${TARGET_MONTH}.csv"
+OUTPUT_FILE="crux_${DATASET}_${TARGET_MONTH}.csv"
 
 # Remove existing file if present
 if [ -f "$OUTPUT_FILE" ]; then

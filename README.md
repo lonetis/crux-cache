@@ -22,7 +22,7 @@ bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/downl
 bash <(curl -sSL https://raw.githubusercontent.com/lonetis/crux-cache/main/download.sh) us 202509
 ```
 
-This will download and merge all chunks into a single CSV file (e.g., `202510.csv`) in your current directory.
+This will download and merge all chunks into a single CSV file (e.g., `crux_global_202510.csv` or `crux_us_202509.csv`) in your current directory.
 
 **Available datasets:** Check [lonetis.github.io/crux-cache](https://lonetis.github.io/crux-cache) or view `data/datasets.json` for the current list of available datasets.
 
