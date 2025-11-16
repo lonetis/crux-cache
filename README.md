@@ -48,7 +48,6 @@ https://www.facebook.com,1000
 
 - **Scope**: All ~18M origins tracked by CrUX
 - **Updates**: Monthly (automated)
-- **History**: January 2025 onwards
 - **Format**: CSV chunks (25MB each, uncompressed)
 - **Source**: [Chrome User Experience Report](https://developer.chrome.com/docs/crux) via BigQuery
 
