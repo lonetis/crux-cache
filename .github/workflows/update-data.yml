@@ -99,7 +99,7 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add data/
+          git add --sparse data/
           TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
           git commit -m "Update CrUX data - ${TIMESTAMP}"
           git push
