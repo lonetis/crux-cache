@@ -13,7 +13,7 @@ permissions:
 # Configure which datasets to download
 env:
   COUNTRIES: "US DE JP"  # Space-separated list of country codes
-  START_YEAR: "2024"
+  START_YEAR: "2023"
   START_MONTH: "1"
 
 jobs:
