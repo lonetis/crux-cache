@@ -1,221 +1,263 @@
 {
   "name": "Cached Chrome User Experience Report - jp",
   "months": {
-    "202501": {
-      "year": 2025,
+    "202401": {
+      "year": 2024,
       "month": 1,
       "chunks": [
         {
           "chunk": 1,
-          "filename": "202501_1.csv",
-          "size": 29627070,
-          "origins": 879529
+          "filename": "202401_1.csv",
+          "size": 29531309,
+          "origins": 879175
         },
         {
           "chunk": 2,
-          "filename": "202501_2.csv",
-          "size": 15581307,
-          "origins": 441956
+          "filename": "202401_2.csv",
+          "size": 15945423,
+          "origins": 452336
         }
       ],
       "total_chunks": 2,
-      "total_size": 45208377,
-      "origins": 1321485
+      "total_size": 45476732,
+      "origins": 1331511
     },
-    "202502": {
-      "year": 2025,
+    "202402": {
+      "year": 2024,
       "month": 2,
       "chunks": [
         {
           "chunk": 1,
-          "filename": "202502_1.csv",
-          "size": 29583751,
-          "origins": 878086
+          "filename": "202402_1.csv",
+          "size": 29451619,
+          "origins": 876735
         },
         {
           "chunk": 2,
-          "filename": "202502_2.csv",
-          "size": 15727158,
-          "origins": 446248
+          "filename": "202402_2.csv",
+          "size": 16121392,
+          "origins": 457220
         }
       ],
       "total_chunks": 2,
-      "total_size": 45310909,
-      "origins": 1324334
+      "total_size": 45573011,
+      "origins": 1333955
     },
-    "202503": {
-      "year": 2025,
+    "202403": {
+      "year": 2024,
       "month": 3,
       "chunks": [
         {
           "chunk": 1,
-          "filename": "202503_1.csv",
-          "size": 29493751,
-          "origins": 875271
+          "filename": "202403_1.csv",
+          "size": 29451988,
+          "origins": 876237
         },
         {
           "chunk": 2,
-          "filename": "202503_2.csv",
-          "size": 15158463,
-          "origins": 429782
+          "filename": "202403_2.csv",
+          "size": 16014426,
+          "origins": 454949
         }
       ],
       "total_chunks": 2,
-      "total_size": 44652214,
-      "origins": 1305053
+      "total_size": 45466414,
+      "origins": 1331186
     },
-    "202504": {
-      "year": 2025,
+    "202404": {
+      "year": 2024,
       "month": 4,
       "chunks": [
         {
           "chunk": 1,
-          "filename": "202504_1.csv",
-          "size": 29545983,
-          "origins": 876676
+          "filename": "202404_1.csv",
+          "size": 29541296,
+          "origins": 878262
         },
         {
           "chunk": 2,
-          "filename": "202504_2.csv",
-          "size": 16152830,
-          "origins": 458252
+          "filename": "202404_2.csv",
+          "size": 17052354,
+          "origins": 484298
         }
       ],
       "total_chunks": 2,
-      "total_size": 45698813,
-      "origins": 1334928
+      "total_size": 46593650,
+      "origins": 1362560
     },
-    "202505": {
-      "year": 2025,
+    "202405": {
+      "year": 2024,
       "month": 5,
       "chunks": [
         {
           "chunk": 1,
-          "filename": "202505_1.csv",
-          "size": 29616503,
-          "origins": 878380
+          "filename": "202405_1.csv",
+          "size": 29642101,
+          "origins": 880771
         },
         {
           "chunk": 2,
-          "filename": "202505_2.csv",
-          "size": 16225281,
-          "origins": 460170
+          "filename": "202405_2.csv",
+          "size": 17198763,
+          "origins": 488520
         }
       ],
       "total_chunks": 2,
-      "total_size": 45841784,
-      "origins": 1338550
+      "total_size": 46840864,
+      "origins": 1369291
     },
-    "202506": {
-      "year": 2025,
+    "202406": {
+      "year": 2024,
       "month": 6,
       "chunks": [
         {
           "chunk": 1,
-          "filename": "202506_1.csv",
-          "size": 29575380,
-          "origins": 877263
+          "filename": "202406_1.csv",
+          "size": 29751832,
+          "origins": 883770
         },
         {
           "chunk": 2,
-          "filename": "202506_2.csv",
-          "size": 16173272,
-          "origins": 458602
+          "filename": "202406_2.csv",
+          "size": 16979281,
+          "origins": 482415
         }
       ],
       "total_chunks": 2,
-      "total_size": 45748652,
-      "origins": 1335865
+      "total_size": 46731113,
+      "origins": 1366185
     },
-    "202507": {
-      "year": 2025,
+    "202407": {
+      "year": 2024,
       "month": 7,
       "chunks": [
         {
           "chunk": 1,
-          "filename": "202507_1.csv",
-          "size": 29613748,
-          "origins": 877998
+          "filename": "202407_1.csv",
+          "size": 29733866,
+          "origins": 882817
         },
         {
           "chunk": 2,
-          "filename": "202507_2.csv",
-          "size": 15744341,
-          "origins": 446170
+          "filename": "202407_2.csv",
+          "size": 15973753,
+          "origins": 453303
         }
       ],
       "total_chunks": 2,
-      "total_size": 45358089,
-      "origins": 1324168
+      "total_size": 45707619,
+      "origins": 1336120
     },
-    "202508": {
-      "year": 2025,
+    "202408": {
+      "year": 2024,
       "month": 8,
       "chunks": [
         {
           "chunk": 1,
-          "filename": "202508_1.csv",
-          "size": 29627371,
-          "origins": 877939
+          "filename": "202408_1.csv",
+          "size": 29670608,
+          "origins": 881037
         },
         {
           "chunk": 2,
-          "filename": "202508_2.csv",
-          "size": 16309889,
-          "origins": 461941
+          "filename": "202408_2.csv",
+          "size": 15484153,
+          "origins": 439135
         }
       ],
       "total_chunks": 2,
-      "total_size": 45937260,
-      "origins": 1339880
+      "total_size": 45154761,
+      "origins": 1320172
     },
-    "202509": {
-      "year": 2025,
+    "202409": {
+      "year": 2024,
       "month": 9,
       "chunks": [
         {
           "chunk": 1,
-          "filename": "202509_1.csv",
-          "size": 29693096,
-          "origins": 879854
+          "filename": "202409_1.csv",
+          "size": 29658333,
+          "origins": 880682
         },
         {
           "chunk": 2,
-          "filename": "202509_2.csv",
-          "size": 16771318,
-          "origins": 475474
+          "filename": "202409_2.csv",
+          "size": 16910030,
+          "origins": 480166
         }
       ],
       "total_chunks": 2,
-      "total_size": 46464414,
-      "origins": 1355328
+      "total_size": 46568363,
+      "origins": 1360848
     },
-    "202510": {
-      "year": 2025,
+    "202410": {
+      "year": 2024,
       "month": 10,
       "chunks": [
         {
           "chunk": 1,
-          "filename": "202510_1.csv",
-          "size": 29703067,
-          "origins": 879913
+          "filename": "202410_1.csv",
+          "size": 29568954,
+          "origins": 878262
         },
         {
           "chunk": 2,
-          "filename": "202510_2.csv",
-          "size": 16083480,
-          "origins": 455758
+          "filename": "202410_2.csv",
+          "size": 17157219,
+          "origins": 487292
         }
       ],
       "total_chunks": 2,
-      "total_size": 45786547,
-      "origins": 1335671
+      "total_size": 46726173,
+      "origins": 1365554
+    },
+    "202411": {
+      "year": 2024,
+      "month": 11,
+      "chunks": [
+        {
+          "chunk": 1,
+          "filename": "202411_1.csv",
+          "size": 29571718,
+          "origins": 878645
+        },
+        {
+          "chunk": 2,
+          "filename": "202411_2.csv",
+          "size": 16103676,
+          "origins": 457419
+        }
+      ],
+      "total_chunks": 2,
+      "total_size": 45675394,
+      "origins": 1336064
+    },
+    "202412": {
+      "year": 2024,
+      "month": 12,
+      "chunks": [
+        {
+          "chunk": 1,
+          "filename": "202412_1.csv",
+          "size": 29464133,
+          "origins": 874891
+        },
+        {
+          "chunk": 2,
+          "filename": "202412_2.csv",
+          "size": 13516236,
+          "origins": 382991
+        }
+      ],
+      "total_chunks": 2,
+      "total_size": 42980369,
+      "origins": 1257882
     }
   },
   "summary": {
-    "total_months": 10,
-    "total_size": 456007059,
-    "earliest_month": "202501",
-    "latest_month": "202510"
+    "total_months": 12,
+    "total_size": 549494463,
+    "earliest_month": "202401",
+    "latest_month": "202412"
   }
 }
