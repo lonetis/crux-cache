@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crux-cache"
+version = "1.0.0"
+description = "Python package for accessing CrUX (Chrome User Experience Report) cached data"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Louis", email = "noreply@example.com"}
+]
+maintainers = [
+    {name = "Louis", email = "noreply@example.com"}
+]
+keywords = ["crux", "chrome", "ux", "user-experience", "report", "dataset", "domains", "rankings"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP",
+]
+dependencies = [
+    "requests>=2.25.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/lonetis/crux-cache"
+Repository = "https://github.com/lonetis/crux-cache"
+Documentation = "https://github.com/lonetis/crux-cache#readme"
+"Bug Tracker" = "https://github.com/lonetis/crux-cache/issues"
+
+[tool.setuptools]
+packages = ["crux_cache"]

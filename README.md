@@ -30,6 +30,30 @@ This will download and merge all chunks into a single CSV file (e.g., `crux_glob
 
 Visit **[lonetis.github.io/crux-cache](https://lonetis.github.io/crux-cache)** to browse and download any dataset with a streaming browser interface
 
+### Option 3: Python Package
+
+Install and use programmatically:
+
+```bash
+pip install crux-cache
+```
+
+```python
+from crux_cache import CruxCache
+
+cache = CruxCache()
+
+# Iterate over all domains in the latest global dataset
+for origin, rank in cache.get_dataset('global'):
+    print(f"{origin}: {rank}")
+
+# Get top 1k domains from a specific month
+for origin, rank in cache.get_dataset('us', month='202510', max_rank=1000):
+    print(f"{origin}: {rank}")
+```
+
+See **[python/README.md](python/README.md)** for complete documentation, API reference, and examples.
+
 ## Data Format
 
 CSV with two columns:
