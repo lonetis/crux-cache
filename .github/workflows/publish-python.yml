@@ -14,7 +14,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout repository with sparse checkout
+      uses: actions/checkout@v4
+      with:
+        sparse-checkout: |
+          python/
+        sparse-checkout-cone-mode: false
 
     - name: Set up Python
       uses: actions/setup-python@v5
