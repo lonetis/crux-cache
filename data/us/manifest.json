@@ -1296,12 +1296,45 @@
       "total_chunks": 4,
       "total_size": 124353705,
       "origins": 3391098
+    },
+    "202511": {
+      "year": 2025,
+      "month": 11,
+      "chunks": [
+        {
+          "chunk": 1,
+          "filename": "202511_1.csv",
+          "size": 30455215,
+          "origins": 858756
+        },
+        {
+          "chunk": 2,
+          "filename": "202511_2.csv",
+          "size": 31540752,
+          "origins": 858756
+        },
+        {
+          "chunk": 3,
+          "filename": "202511_3.csv",
+          "size": 31518779,
+          "origins": 858756
+        },
+        {
+          "chunk": 4,
+          "filename": "202511_4.csv",
+          "size": 31546749,
+          "origins": 823865
+        }
+      ],
+      "total_chunks": 4,
+      "total_size": 125061495,
+      "origins": 3400133
     }
   },
   "summary": {
-    "total_months": 34,
-    "total_size": 4474500191,
+    "total_months": 35,
+    "total_size": 4599561686,
     "earliest_month": "202301",
-    "latest_month": "202510"
+    "latest_month": "202511"
   }
 }

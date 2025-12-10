@@ -714,12 +714,33 @@
       "total_chunks": 2,
       "total_size": 40665471,
       "origins": 1157804
+    },
+    "202511": {
+      "year": 2025,
+      "month": 11,
+      "chunks": [
+        {
+          "chunk": 1,
+          "filename": "202511_1.csv",
+          "size": 31436974,
+          "origins": 899663
+        },
+        {
+          "chunk": 2,
+          "filename": "202511_2.csv",
+          "size": 10341180,
+          "origins": 282342
+        }
+      ],
+      "total_chunks": 2,
+      "total_size": 41778154,
+      "origins": 1182005
     }
   },
   "summary": {
-    "total_months": 34,
-    "total_size": 1448969855,
+    "total_months": 35,
+    "total_size": 1490748009,
     "earliest_month": "202301",
-    "latest_month": "202510"
+    "latest_month": "202511"
   }
 }
