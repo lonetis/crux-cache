@@ -3,38 +3,38 @@
     {
       "id": "de",
       "name": "Cached Chrome User Experience Report - de",
-      "total_months": 35,
+      "total_months": 36,
       "earliest_month": "202301",
-      "latest_month": "202511",
-      "latest_origins": 1182005,
-      "total_size": 1490748009
+      "latest_month": "202512",
+      "latest_origins": 1119722,
+      "total_size": 1530244584
     },
     {
       "id": "global",
       "name": "Cached Chrome User Experience Report - global",
-      "total_months": 35,
+      "total_months": 36,
       "earliest_month": "202301",
-      "latest_month": "202511",
-      "latest_origins": 18426351,
-      "total_size": 23698309650
+      "latest_month": "202512",
+      "latest_origins": 17228655,
+      "total_size": 24332637143
     },
     {
       "id": "jp",
       "name": "Cached Chrome User Experience Report - jp",
-      "total_months": 35,
+      "total_months": 36,
       "earliest_month": "202301",
-      "latest_month": "202511",
-      "latest_origins": 1325694,
-      "total_size": 1591765021
+      "latest_month": "202512",
+      "latest_origins": 1266017,
+      "total_size": 1635162673
     },
     {
       "id": "us",
       "name": "Cached Chrome User Experience Report - us",
-      "total_months": 35,
+      "total_months": 36,
       "earliest_month": "202301",
-      "latest_month": "202511",
-      "latest_origins": 3400133,
-      "total_size": 4599561686
+      "latest_month": "202512",
+      "latest_origins": 3192036,
+      "total_size": 4716778300
     }
   ],
   "total_datasets": 4
