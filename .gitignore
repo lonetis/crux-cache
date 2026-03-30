@@ -21,7 +21,6 @@ wheels/
 *.egg
 
 # Pipenv
-Pipfile.lock
 
 # Virtual environments
 venv/
