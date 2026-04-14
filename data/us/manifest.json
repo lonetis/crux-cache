@@ -1440,12 +1440,51 @@
       "total_chunks": 5,
       "total_size": 130748194,
       "origins": 3546689
+    },
+    "202603": {
+      "year": 2026,
+      "month": 3,
+      "chunks": [
+        {
+          "chunk": 1,
+          "filename": "202603_1.csv",
+          "size": 30462055,
+          "origins": 855728
+        },
+        {
+          "chunk": 2,
+          "filename": "202603_2.csv",
+          "size": 31512927,
+          "origins": 855728
+        },
+        {
+          "chunk": 3,
+          "filename": "202603_3.csv",
+          "size": 31357941,
+          "origins": 855728
+        },
+        {
+          "chunk": 4,
+          "filename": "202603_4.csv",
+          "size": 32930644,
+          "origins": 855728
+        },
+        {
+          "chunk": 5,
+          "filename": "202603_5.csv",
+          "size": 2604458,
+          "origins": 70660
+        }
+      ],
+      "total_chunks": 5,
+      "total_size": 128868025,
+      "origins": 3493572
     }
   },
   "summary": {
-    "total_months": 38,
-    "total_size": 4975641206,
+    "total_months": 39,
+    "total_size": 5104509231,
     "earliest_month": "202301",
-    "latest_month": "202602"
+    "latest_month": "202603"
   }
 }
