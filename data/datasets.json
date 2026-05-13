@@ -30,11 +30,11 @@
     {
       "id": "us",
       "name": "Cached Chrome User Experience Report - us",
-      "total_months": 39,
+      "total_months": 40,
       "earliest_month": "202301",
-      "latest_month": "202603",
-      "latest_origins": 3493572,
-      "total_size": 5104509231
+      "latest_month": "202604",
+      "latest_origins": 3505655,
+      "total_size": 5233805970
     }
   ],
   "total_datasets": 4
