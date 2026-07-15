@@ -1557,12 +1557,45 @@
       "total_chunks": 5,
       "total_size": 126550950,
       "origins": 3435662
+    },
+    "202606": {
+      "year": 2026,
+      "month": 6,
+      "chunks": [
+        {
+          "chunk": 1,
+          "filename": "202606_1.csv",
+          "size": 30708579,
+          "origins": 864619
+        },
+        {
+          "chunk": 2,
+          "filename": "202606_2.csv",
+          "size": 31672464,
+          "origins": 864619
+        },
+        {
+          "chunk": 3,
+          "filename": "202606_3.csv",
+          "size": 31852350,
+          "origins": 864619
+        },
+        {
+          "chunk": 4,
+          "filename": "202606_4.csv",
+          "size": 28028533,
+          "origins": 731056
+        }
+      ],
+      "total_chunks": 4,
+      "total_size": 122261926,
+      "origins": 3324913
     }
   },
   "summary": {
-    "total_months": 41,
-    "total_size": 5360356920,
+    "total_months": 42,
+    "total_size": 5482618846,
     "earliest_month": "202301",
-    "latest_month": "202605"
+    "latest_month": "202606"
   }
 }
