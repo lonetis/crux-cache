@@ -35,6 +35,7 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Python
+        id: setup-python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -46,10 +47,18 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.local/share/virtualenvs
-          key: ${{ runner.os }}-python-3.11-pipenv-${{ hashFiles('**/Pipfile.lock') }}
+          key: ${{ runner.os }}-python-${{ steps.setup-python.outputs.python-version }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
 
       - name: Install dependencies
-        run: pipenv install --deploy
+        run: |
+          # A restored cache can hold a virtualenv whose interpreter symlink points at a
+          # toolcache Python the runner no longer ships; recreate it instead of failing.
+          venv=$(pipenv --venv 2>/dev/null || true)
+          if [ -n "$venv" ] && [ ! -x "$venv/bin/python" ]; then
+            echo "Removing stale virtualenv: $venv"
+            rm -rf "$venv"
+          fi
+          pipenv install --deploy
 
       - name: Authenticate to Google Cloud
         env:
