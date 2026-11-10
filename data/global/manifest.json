@@ -5991,12 +5991,141 @@
       "total_chunks": 21,
       "total_size": 676013975,
       "origins": 18376044
+    },
+    "202610": {
+      "year": 2026,
+      "month": 10,
+      "chunks": [
+        {
+          "chunk": 1,
+          "filename": "202610_1.csv",
+          "size": 30647419,
+          "origins": 907009
+        },
+        {
+          "chunk": 2,
+          "filename": "202610_2.csv",
+          "size": 31782489,
+          "origins": 907009
+        },
+        {
+          "chunk": 3,
+          "filename": "202610_3.csv",
+          "size": 31354606,
+          "origins": 907009
+        },
+        {
+          "chunk": 4,
+          "filename": "202610_4.csv",
+          "size": 31842532,
+          "origins": 907009
+        },
+        {
+          "chunk": 5,
+          "filename": "202610_5.csv",
+          "size": 32860835,
+          "origins": 907009
+        },
+        {
+          "chunk": 6,
+          "filename": "202610_6.csv",
+          "size": 32779444,
+          "origins": 907009
+        },
+        {
+          "chunk": 7,
+          "filename": "202610_7.csv",
+          "size": 33088741,
+          "origins": 907009
+        },
+        {
+          "chunk": 8,
+          "filename": "202610_8.csv",
+          "size": 32562469,
+          "origins": 907009
+        },
+        {
+          "chunk": 9,
+          "filename": "202610_9.csv",
+          "size": 33159676,
+          "origins": 907009
+        },
+        {
+          "chunk": 10,
+          "filename": "202610_10.csv",
+          "size": 34376047,
+          "origins": 907009
+        },
+        {
+          "chunk": 11,
+          "filename": "202610_11.csv",
+          "size": 34770766,
+          "origins": 907009
+        },
+        {
+          "chunk": 12,
+          "filename": "202610_12.csv",
+          "size": 33262013,
+          "origins": 907009
+        },
+        {
+          "chunk": 13,
+          "filename": "202610_13.csv",
+          "size": 33925021,
+          "origins": 907009
+        },
+        {
+          "chunk": 14,
+          "filename": "202610_14.csv",
+          "size": 33365321,
+          "origins": 907009
+        },
+        {
+          "chunk": 15,
+          "filename": "202610_15.csv",
+          "size": 33266867,
+          "origins": 907009
+        },
+        {
+          "chunk": 16,
+          "filename": "202610_16.csv",
+          "size": 33848204,
+          "origins": 907009
+        },
+        {
+          "chunk": 17,
+          "filename": "202610_17.csv",
+          "size": 33479581,
+          "origins": 907009
+        },
+        {
+          "chunk": 18,
+          "filename": "202610_18.csv",
+          "size": 35171208,
+          "origins": 907009
+        },
+        {
+          "chunk": 19,
+          "filename": "202610_19.csv",
+          "size": 35123472,
+          "origins": 907009
+        },
+        {
+          "chunk": 20,
+          "filename": "202610_20.csv",
+          "size": 32435406,
+          "origins": 837036
+        }
+      ],
+      "total_chunks": 20,
+      "total_size": 663102117,
+      "origins": 18070207
     }
   },
   "summary": {
-    "total_months": 45,
-    "total_size": 30416585310,
+    "total_months": 46,
+    "total_size": 31079687427,
     "earliest_month": "202301",
-    "latest_month": "202609"
+    "latest_month": "202610"
   }
 }
